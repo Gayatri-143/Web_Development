@@ -1,0 +1,55 @@
+/* General styling for the entire XML document */
+library {
+  display: block;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f4f7;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Styling for each book */
+book {
+  display: block;
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-left: 6px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+}
+
+book:hover {
+  transform: translateY(-4px);
+}
+
+/* Styling for book title */
+title {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+/* Styling for author and year */
+author, year {
+  display: block;
+  font-style: normal;
+  color: #555;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+author::before {
+  content: "Author: ";
+  font-weight: bold;
+  color: #2980b9;
+}
+
+year::before {
+  content: "Published: ";
+  font-weight: bold;
+  color: #2980b9;
+}

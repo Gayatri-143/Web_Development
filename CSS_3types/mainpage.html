@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Assignment</title>
+  <style>
+    /* Reset & Base Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2, #fc5c7d, #ff9966);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: 'Poppins', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .assignment-box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 30px 50px;
+      border-radius: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      min-width: 220px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: popUp 1s ease forwards;
+    }
+
+    .assignment-box a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .assignment-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    @keyframes popUp {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="assignment-box">
+    <p><a href="inline.html">Inline CSS</a></p>
+  </div>
+  <div class="assignment-box">
+    <p><a href="internal.html">Internal CSS</a></p>
+  </div>
+</div>
+
+</body>
+</html>
